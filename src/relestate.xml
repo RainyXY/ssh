@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="base" namespace="/" extends="struts-default">
+
+		<interceptors>
+
+			<interceptor name="loginCheck"
+				class="pers.lisiyan.relestate.interceptor.LoginCheckInteceptor" />
+				
+			<interceptor name="ipCheck"
+				class="pers.lisiyan.relestate.interceptor.IpCheckInteceptor" />
+			
+
+			<interceptor-stack name="cityoaStack">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="loginCheck" />
+				<interceptor-ref name="ipCheck" />
+
+
+			</interceptor-stack>
+
+		</interceptors>
+		<default-interceptor-ref name="cityoaStack" />
+
+
+		<global-results>
+			<result name="error">/error/error.jsp</result>
+			<result name="login">/login/login.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception"
+				result="error" />
+
+		</global-exception-mappings>
+
+
+
+	</package>
+
+	<package name="employee" namespace="/employee/emp" extends="base">
+
+		<action name="to*"
+			class="pers.lisiyan.relestate.controller.IdentityFrontController"
+			method="to{1}">
+
+			<result name="tomain">/employee/emp/main.jsp</result>
+
+			<result name="toadd">/employee/emp/add.jsp</result>
+		</action>
+
+		<action name="process*"
+			class="pers.lisiyan.relestate.controller.IdentityProcessController"
+			method="{1}">
+
+			<result name="success" type="redirectAction">
+				<!-- namespace && tomain -->
+				<param name="namespace">/employee/emp</param>
+				<param name="actionName">tomain</param>
+			</result>
+
+		</action>
+	</package>
+
+	<package name="contract" namespace="/contract/contract"
+		extends="base">
+
+
+		<action name="to*"
+
+			class="pers.lisiyan.relestate.controller.ContractFrontController"
+			method="to{1}">
+
+			<result name="show">/contract/contract/add.jsp</result>
+
+			<result name="message">/contract/contract/main.jsp</result>
+
+			<result name="modify">/contract/contract/show.jsp</result>
+
+		</action>
+
+		<action name="process*"
+			class="pers.lisiyan.relestate.controller.ContractProcessController"
+			method="{1}">
+
+			<result name="success" type="redirectAction">
+				<!-- namespace && tomain -->
+				<param name="namespace">/login</param>
+				<param name="actionName">tomain</param>
+			</result>
+
+		</action>
+	</package>
+
+	<!-- name="jsp的文件夹名字" namespace="/name" extends="base" -->
+	<package name="login" namespace="/login" extends="base">
+		<!-- name="url请求" class="类名" method="方法" -->
+		<action name="to*"
+
+			class="pers.lisiyan.relestate.controller.UserFrontController" method="to{1}">
+
+			<result name="tomain" type="dispatcher">/main/test/index.jsp</result>
+
+			<result name="toadd" type="dispatcher">/login/register.jsp</result>
+
+			<result name="tocheck" type="dispatcher">/login/login.jsp</result>
+
+ <interceptor-ref name="defaultStack" />
+		</action>
+
+		<action name="login"
+			class="pers.lisiyan.relestate.controller.UserLoginController" method="login">
+
+			<result name="success" type="redirect">tomain.action</result>
+			<result name="failure">/login/login.jsp</result>
+			<result name="input">/login/login.jsp</result>
+			<interceptor-ref name="defaultStack" />
+		</action>
+
+		<action name="logout" class="userLogoutController" method="logout">
+
+			<result name="success" type="redirect">tomain.action</result>
+			<result name="failure">/login/login.jsp</result>
+
+			<interceptor-ref name="defaultStack" />
+		</action>
+
+		<action name="process*"
+			class="pers.lisiyan.relestate.controller.UserProcessController"
+			method="{1}">
+			<result name="success" type="redirectAction">
+				<!-- namespace && tomain -->
+				<param name="namespace">/login</param>
+				<param name="actionName">tomain</param>
+			</result>
+		  <result name="input">/login/registertest.jsp</result> 
+		  
+		  <interceptor-ref name="defaultStack" />
+		</action>
+
+
+	</package>
+
+	<package name="main_test" namespace="/main/test" extends="base">
+
+		<action name="tosell*" class="sellHouseFrontController" method="to{1}">
+
+			<result name="tomain" type="dispatcher">/main/test/index.jsp</result>
+
+			<result name="toshow" type="dispatcher">/main/test/simplesellhouse.jsp
+			</result>
+
+			<result name="tomessage" type="dispatcher">/main/test/updatesellhouse.jsp
+			</result>
+
+		</action>
+
+
+		<action name="torent*" class="rentHouseFrontController" method="to{1}">
+
+			<result name="tomain" type="dispatcher">/main/test/index.jsp</result>
+
+			<result name="toshow" type="dispatcher">/main/test/simplerenthouse.jsp
+			</result>
+
+			<result name="tomessage" type="dispatcher">/main/test/updaterenthouse.jsp
+			</result>
+
+		</action>
+
+		<action name="showsellphoto"
+			class="pers.lisiyan.relestate.controller.SellHousePhotoShowController"
+			method="show">
+			<result name="success" type="stream">
+				<param name="contentType">${sellHouseModel.contentType}</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment;filename=${sellHouseModel.fileName}</param>
+			</result>
+
+		</action>
+
+		<action name="showrentphoto"
+			class="pers.lisiyan.relestate.controller.RentHousePhotoShowController"
+			method="show">
+			<result name="success" type="stream">
+				<param name="contentType">${rentHouseModel.contentType}</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment;filename=${rentHouseModel.fileName}</param>
+			</result>
+
+		</action>
+
+
+
+		<action name="navi"
+			class="pers.lisiyan.relestate.controller.HouseFrontMainController"
+			method="todispatch">
+
+			<result name="home" type="redirectAction">
+				<!-- namespace && tomain -->
+				<param name="namespace">/login</param>
+				<param name="actionName">tomain</param>
+			</result>
+			<result name="registersellhouse" type="dispatcher">/main/test/registersellhouse.jsp
+			</result>
+			<result name="renthouse" type="dispatcher">/main/test/simplerenthouse.jsp
+			</result>
+			<result name="sellhouse" type="dispatcher">/main/test/simplesellhouse.jsp
+			</result>
+			<result name="registerrenthouse" type="dispatcher">/main/test/registerrenthouse.jsp
+			</result>
+
+
+		</action>
+
+
+
+		<action name="processSellHouse*"
+			class="pers.lisiyan.relestate.controller.SellHouseProcessController"
+			method="{1}">
+			<result name="success" type="redirectAction">
+				<!-- namespace && tomain -->
+				<param name="namespace">/login</param>
+				<param name="actionName">tomain</param>
+			</result>
+
+		</action>
+
+		<action name="processRentHouse*"
+			class="pers.lisiyan.relestate.controller.RentHouseProcessController"
+			method="{1}">
+			<result name="success" type="redirectAction">
+				<!-- namespace && tomain -->
+				<param name="namespace">/login</param>
+				<param name="actionName">tomain</param>
+			</result>
+
+		</action>
+
+
+	</package>
+
+
+
+
+
+
+
+</struts>

@@ -1,0 +1,149 @@
+/* CSS Document */
+/********************************全局样式************************************/
+
+* { margin:0; padding:0; }
+body, ul, ol, li, dl, dt, dd, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div { margin:0; padding:0; border:0; font-family:Arial, SimSun; }
+body { font-size:12px; text-align:center; line-height:16px; }
+li { list-style:none; }
+.c { clear:both; }
+h1, h2, h3, h4, h5, h6 { font-size:12px; font-weight:normal; }
+img { border:none; }
+body,html {height:100%}
+.bgColor_01 { background:#9CC; }
+.bgColor_02 { background:#eef; }
+.right{ text-align:right}
+.center{ text-align:center}
+.left{ text-align:left}
+
+/********************************头部************************************/
+
+#topFrame { height: 150px; width: 100%; background-image: url(../images/topBg.gif); background-repeat: repeat-x; }
+#topFrame .topLeft { height: 120px; background-image: url(../images/top.jpg); background-repeat: no-repeat; background-position: right; float: left; width: 60%; text-align: left; }
+#topFrame .userInfo { height: 60px; padding-right: 10px; }
+#topFrame .topRight { background-image: url(../images/topBg2.gif); background-repeat: repeat-x; float: left; height: 120px; width: 40%; text-align: right; }
+#clock { float: left; height: 36px; padding-top: 24px; padding-left: 10px; font-size: 14px; color: #FFF; }
+#topFrame .userInfo ul li { float: right; font-size: 14px; height: 36px; padding-top: 5px; color: #CCC; }
+#topFrame .userInfo ul li a { color: #FF0; text-decoration: none; }
+#topFrame .userInfo ul .blank { width: 100px; }
+
+/************************************************职位列表主界面********************************************/
+.title{ padding-top:10px; padding-bottom:8px;}
+#listPosition table tr td { height: 30px; }
+#listPosition form table thead tr th { background-color: #09C; }
+#listPosition form table caption { font-size: 14px; font-weight: bold; height: 40px; line-height:40px;}
+#listPosition form table tfoot tr td span { margin-right: 3px; margin-left: 3px; }
+#listPosition form table tfoot tr td span .input { width: 40px; }
+#listPosition form table tfoot tr td span .btn { width: 40px; }
+#listPosition form table tfoot tr td { background-color: #CCC; }
+#listPosition .select { text-align: left; margin-top: 15px; padding-left: 20px; }
+#listPosition .select form span { padding-right: 3px; padding-left: 3px; }
+#listPosition .select form { margin-top: 10px; line-height: 28px; }
+#listPosition .select form span .btn { background: transparent url(../images/btn_01.png) no-repeat; height: 28px; width: 60px; border:0px; }
+#listPosition .select p { line-height: 20px; padding-top: 5px; }
+#container{ width:750px; margin:0 auto;}
+/************************************************职位相信信息界面********************************************/
+#viewPosition{ width:750px; margin:0 auto; padding-top:10px;}
+#viewPosition .borderPositionInfor { border:1px #999 solid; border-bottom:none; width:680px}
+#viewPosition .borderPositionInfor caption{ font-size:16px; color:#333; font-weight:bold; padding-bottom:8px;}
+#viewPosition .borderPositionInfor .borBottom{  border-bottom:1px #999 solid;}
+#viewPosition .borderPositionInfor .borBottom table { margin:0 auto; text-align:left; width:580px; padding-bottom:10px; padding-top:4px;}
+#viewPosition .borderPositionInfor .borBottom div{ font-size:12px; text-align:left; color:#666; font-weight:bold; padding-top:10px; padding-left:20px;}
+#viewPosition .borderPositionInfor .borBottom table tr td{ height:20px; line-height:20px;}
+#viewPosition .borderPositionInfor .borBottom table tr .w1{ width:90px; font-weight:bold}
+#viewPosition .borderPositionInfor .borBottom table tr .w2{ width:200px;}
+#viewPosition .borderPositionInfor .borBottom table tr .w3{ width:90px; font-weight:bold;}
+#viewPosition .borderPositionInfor .borBottom table tr .w4{ width:200px;}
+#viewPosition .borderPositionInfor .borBottom table tr .btnApply{ text-align:right;}
+#viewPosition .borderPositionInfor .borBottom table tr .w4 input{ background:url(../images/btnApply.gif) no-repeat; border:0px; width:92px; height:28px; font-weight:bold;}
+/************************************************职位相信信息界面********************************************/
+#resumeBasic{ width:600px; margin:0 auto;}
+#resumeBasic caption{ text-align:left; font-size:14px; font-weight:bold; color:#333; padding-top:2px; padding-bottom:8px;}
+#resumeBasic table tr td{ height:24px; line-height:24px;}
+#resumeBasic table .w1{ width:80px; text-align:right; padding-right:15px;}
+#resumeBasic table .w2{ width:500px; text-align:left;}
+#resumeBasic table .txtResumeDate{ width:80px;}
+#resumeBasic table .btnNext{ text-align:left; padding-top:8px;}
+#resumeBasic table .btnNext input{ width:60px; height:28px; background:url(../images/btn_01.png) no-repeat; border:0px; font-weight:bold;}
+/**************************************************工作经历********************************************************/
+#resumeExperience table{ margin:0 auto;}
+#resumeExperience table tr td { height: 30px; }
+#resumeExperience table thead tr th { background-color: #09C; }
+#resumeExperience table caption { font-size: 14px; font-weight: bold; height: 40px; line-height:40px;}
+#resumeExperience table tfoot tr td span { margin-right: 3px; margin-left: 3px; }
+#resumeExperience table tfoot tr td span .input { width: 40px; }
+#resumeExperience table tfoot tr td span .btn { width: 40px; }
+#resumeExperience table tfoot tr td { background-color: #CCC; }
+#resumeExperience .select { text-align: left; margin-top: 20px; padding-left: 20px; }
+#resumeExperience .select form span { padding-right: 3px; padding-left: 3px; }
+#resumeExperience .select form { margin-top: 10px; }
+.btn { background: transparent url(../images/btn_01.png) no-repeat; height: 28px; width: 60px; border:0px; margin-left:10px; }
+#resumeExperience .action{ padding-top:8px; padding-bottom:10px;}
+#resumeExperience .workTxtDate{ width:80px;}
+#resumeExperience .workTxt{ width:280px;}
+#resumeExperience #addWorkExperience{ text-align:left}
+.cut{ border-top:2px #003 solid;}
+/**************************************************教育经历********************************************************/
+#resumeEducation table{ margin:0 auto;}
+#resumeEducation table tr td { height: 30px; }
+#resumeEducation table thead tr th { background-color: #09C; }
+#resumeEducation table caption { font-size: 14px; font-weight: bold; height: 40px; line-height:40px;}
+#resumeEducation table tfoot tr td span { margin-right: 3px; margin-left: 3px; }
+#resumeEducation table tfoot tr td span .input { width: 40px; }
+#resumeEducation table tfoot tr td span .btn { width: 40px; }
+#resumeEducation table tfoot tr td { background-color: #CCC; }
+#resumeEducation .select { text-align: left; margin-top: 20px; padding-left: 20px; }
+#resumeEducation .select form span { padding-right: 3px; padding-left: 3px; }
+#resumeEducation .select form { margin-top: 10px; }
+.btn { background: transparent url(../images/btn_01.png) no-repeat; height: 28px; width: 60px; border:0px; margin-left:10px; }
+#resumeEducation .action{ padding-top:8px; padding-bottom:10px;}
+#resumeEducation .workTxtDate{ width:80px;}
+#resumeEducation .workTxt{ width:280px;}
+#resumeEducation #addWorkExperience{ text-align:left}
+/**************************************************基本技能********************************************************/
+#resumeSkill table{ margin:0 auto;}
+#resumeSkill table tr td { height: 30px; }
+#resumeSkill table thead tr th { background-color: #09C; }
+#resumeSkill table caption { font-size: 14px; font-weight: bold; height: 40px; line-height:40px;}
+#resumeSkill table tfoot tr td span { margin-right: 3px; margin-left: 3px; }
+#resumeSkill table tfoot tr td span .input { width: 40px; }
+#resumeSkill table tfoot tr td span .btn { width: 40px; }
+#resumeSkill table tfoot tr td { background-color: #CCC; }
+#resumeSkill .select { text-align: left; margin-top: 20px; padding-left: 20px; }
+#resumeSkill .select form span { padding-right: 3px; padding-left: 3px; }
+#resumeSkill .select form { margin-top: 10px; }
+#resumeSkill .action{ padding-top:8px; padding-bottom:10px;}
+#resumeSkill .workTxtDate{ width:160px;}
+#resumeSkill .skillTxt{ width:100px;}
+
+/**************************************************家庭成员********************************************************/
+#resumeFamily table{ margin:0 auto;}
+#resumeFamily table tr td { height: 30px; }
+#resumeFamily table thead tr th { background-color: #09C; }
+#resumeFamily table caption { font-size: 14px; font-weight: bold; height: 40px; line-height:40px;}
+#resumeFamily table tfoot tr td span { margin-right: 3px; margin-left: 3px; }
+#resumeFamily table tfoot tr td span .input { width: 40px; }
+#resumeFamily table tfoot tr td span .btn { width: 40px; }
+#resumeFamily table tfoot tr td { background-color: #CCC; }
+#resumeFamily .select { text-align: left; margin-top: 20px; padding-left: 20px; }
+#resumeFamily .select form span { padding-right: 3px; padding-left: 3px; }
+#resumeFamily .select form { margin-top: 10px; }
+#resumeFamily .action{ padding-top:8px; padding-bottom:10px;}
+#resumeFamily .workTxtDate{ width:160px;}
+#resumeFamily .skillTxt{ width:100px;}
+/**************************************************自我评价********************************************************/
+.tipsEvaluation{ text-align:left; width:550px; padding-top:8px; color:#f60; margin:0 auto; padding-bottom:10px;}
+#resumeEvaluation{ width:600px; margin:0 auto}
+#resumeEvaluation textarea{ width:550px; height:300px;}
+#resumeEvaluation table{ width:170px; margin:0 auto; padding-top:10px;}
+/**************************************************问卷******************************************************/
+#value{ width:450px; margin:0 auto}
+#value .questValue table{}
+#value .titleQuest td{ font-weight:bold; text-align:left}
+#value .titleQuest .w1{ width:30px; text-align:left; padding-left:10px;}
+#value .contentQuest{ text-align:left}
+#value .contentQuest .w2{ width:400px; text-align:left; padding-left:10px;}
+.nextQ{ padding-bottom:15px;}
+/**************************************************确认信息******************************************************/
+#confirm{ width:750px; margin:0 auto;}
+#confirm .message{  height:30px; line-height:30px; color:#f60; font-size:14px; font-weight:bold; text-align:center}
+#confirm .return input{ background:url(../images/btnApply.gif) no-repeat; border:0px; width:92px; height:28px;}

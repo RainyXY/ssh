@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* 作品轮播的css样式，本样式摘自互联网的开源代码，由杨健修改并优化,设计到一些css3的知识*/
+/* 头文件*/
+* { margin:0; padding:0; }
+body, ul, ol, li, dl, dt, dd, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div { margin:0; padding:0; border:0; font-family:	Microsoft YaHei,SimSun; }
+body { font-size:12px; text-align:center; line-height:16px; }
+li { list-style:none; }
+.c { clear:both; }
+h1, h2, h3, h4, h5, h6 { font-size:12px; font-weight:normal;}
+h1  {font-size: 22px; } h2  {font-size: 22px;} h3  {font-size: 18px;} h4  {font-size: 16px;} h5  {font-size: 14px;} h6  {font-size: 12px;}
+.n{ text-decoration:none;}
+img { border:none; }
+/*-------------------------------------------------------------------------------------------*/
+/* 此处控制大的样式*/
+/*-------------------------------------------------------------------------------------------*/
+#main{width:1000px;border:2px #FFF solid; height:320px;
+background-image:none; margin:0 auto}
+#main.fullwidth {width: 1000px;}
+#sidebar{width:220px;}
+.col-left { float: left; }
+.col-right { float: right; }
+.col-full  { width: 1000px; margin: 0 auto; }
+/* 字体与链接控制 */
+#content{padding:0 0 30px;}
+#sidebar{overflow:hidden;}
+#loopedSlider {
+	position:relative;
+	width:100%;
+	margin: 0 0 0px 0;
+}
+#loopedSlider .container { overflow:hidden; position:relative; }
+#loopedSlider .slides { position:absolute; top:0; left:0; }
+#loopedSlider .slides div.slide { position:absolute; top:0; width: 1000px; display:none; }
+#loopedSlider .slide-content  { position: absolute; top: 40px; right: 0px; color: #fff; text-align: right; max-width: 500px; }
+#loopedSlider .slide-content h2  {
+	font-size: 20px;
+	font-family: Georgia, serif;
+	background:rgb(0,0,0);/* 此处使用了css3的属性，他可以控制颜色，默认黑色，透明度，只有ie不支持 */
+	background:rgba(0,0,0,.5);
+	padding: 10px 20px 0px 20px;
+}
+#loopedSlider .slide-content h2 a  { color: #fff; }
+#loopedSlider .slide-content p  { line-height: 22px; background:rgb(0,0,0); background:rgba(0,0,0,.5); padding: 10px 20px; }
+
+#loopedSlider .slide-content .category a { font-size: 11px; font-weight: bold !important; font-family: arial, helvetica, san-serif !important; color: #ccc; text-transform: uppercase; }
+#loopedSlider a.previous { position:absolute; bottom:20px; right:100px; opacity:0.5;}/* 此处使用了css3的属性，他可以控制透明度，默认黑色，只有ie不支持*/
+#loopedSlider a.next { position:absolute;  bottom:20px; right:60px; opacity:0.5;}
+#loopedSlider a.previous:hover, #loopedSlider a.next:hover { opacity:1; }
+/*杨健at2010/06/27*/

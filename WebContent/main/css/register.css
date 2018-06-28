@@ -1,0 +1,88 @@
+#form-table{
+    width:600px;
+    height:750px;
+    margin:0 auto;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    padding: 20px;
+}
+h2{
+    text-align: left;
+    font-weight: bolder;
+    padding-left: 15px;
+    border-left: 1px solid lightgrey;
+    margin-bottom: 20px;
+}
+select{
+    width:50px;
+    height:30px;
+    margin-left: 28px;
+    border-radius: 2px;
+    border:1px solid rgb(209, 209, 209);
+}
+textarea{
+    resize:none;
+    margin-left: 28px;
+    border-radius: 5px;
+    border: 1px solid #d1d1d1;
+    padding: 10px;
+}
+.left-td{
+    width:160px;
+    height:30px;
+    margin-bottom: 10px;
+    padding-top:20px;
+    padding-bottom:20px;
+    font-size: 16px;
+}
+.left-td span{
+    color: red;
+}
+.left-td1{
+    text-align: right;
+}
+.left-td2{
+    width:160px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding-left: 100px;
+}
+.left-td3{
+    width:500px;
+    height:50px;
+    padding:20px;
+}
+.left-td3 input{
+    width:160px;
+    height:36px;
+    border: 0;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    font-size: 24px;
+    letter-spacing: 6px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 190px;
+}
+.right-td{
+    width:350px;
+    height:30px;
+    margin-bottom:10px;
+}
+.right-td span{
+    margin-left: 10px;
+}
+.inputsty1{
+    height:36px;
+    border: 1px solid #d1d1d1;
+    padding:0 5px;
+    border-radius: 5px;
+    margin-left: 26px; 
+}
+.inputsty2{
+    width:240px;
+}
+.inputsty3{
+    width:300px;
+}

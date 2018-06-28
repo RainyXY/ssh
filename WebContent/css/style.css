@@ -1,0 +1,223 @@
+@charset "utf-8";
+/* CSS Document */
+
+/********************************全局样式************************************/
+
+* { margin:0; padding:0; }
+body, ul, ol, li, dl, dt, dd, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div { margin:0; padding:0; border:0; font-family:Arial, SimSun; }
+body { font-size:12px; text-align:center; line-height:16px; }
+li { list-style:none; }
+.c { clear:both; }
+h1, h2, h3, h4, h5, h6 { font-size:12px; font-weight:normal; }
+img { border:none; }
+body,html {height:100%}
+
+/********************************登陆页样式************************************/
+
+#login { height:100%; background-repeat: repeat-x; }
+#loginTop { height: 120px; width: 100%; background-image: url(../images/topBg.gif); background-repeat: repeat-x; }
+#loginTop .topLeft { height: 120px; background-image: url(../images/top.jpg); background-repeat: no-repeat; background-position: right; float: left; width: 60%; text-align: left; }
+#loginTop .topRight { background-image: url(../images/topBg2.gif); background-repeat: repeat-x; float: left; height: 120px; width: 40%; text-align: right; }
+#loginMain { height: 370px; width: 515px; margin:70px auto 0 auto; background:url(../images/loginBg.png) no-repeat;}
+#loginMain .title { background-image: url(../images/loginTitle.png); background-repeat: no-repeat; background-position: 45px 28px; height: 90px; }
+#loginMain .input { height: 150px; }
+#loginMain .input form .text { float: left; height: 150px; width: 280px; padding-left: 85px; }
+#loginMain .input form .button { float: left; height: 150px; width: 150px; background-image: url(../images/loginButton.png); background-repeat: no-repeat; text-align: left; }
+#loginMain .input form .text ul li .inputText { height: 17px; width: 140px; border:0px; padding-left:25px; background: url(../images/user_login_name.gif) no-repeat; font-family: "宋体"; font-size: 12px; padding-top: 4px; }
+#loginMain .input form .text ul li .inputPass { height: 14px; width: 140px; border:0px; background: url(../images/user_login_password.gif) no-repeat; padding-left:25px; font-family: "宋体"; font-size: 8px; padding-top: 7px; }
+#loginMain .input form .text ul li span { padding-right: 20px; }
+#loginMain .input form .button .submit { background-color: transparent; height: 92px; width: 82px; border:0px; cursor:pointer; }
+#loginMain .input form .text ul li { text-align: left; height: 50px; padding-top: 8px; }
+
+/********************************头部样式************************************/
+
+#topFrame { height: 180px; width: 100%; background-image: url(../images/topBg.gif); background-repeat: repeat-x; }
+#topFrame .topLeft { height: 120px; background-image: url(../images/top.jpg); background-repeat: no-repeat; background-position: right; float: left; width: 50%; text-align: left; }
+#topFrame .userInfo { height: 60px; padding-right: 10px; }
+#topFrame .topRight { background-image: url(../images/topBg2.gif); background-repeat: repeat-x; float: left; height: 120px; width: 50%; text-align: right; }
+#clock { float: left; height: 36px; padding-top: 24px; padding-left: 10px; font-size: 14px; color: #FFF; }
+#topFrame .userInfo ul li { float: right; font-size: 14px; height: 36px; padding-top: 24px; color: #CCC; margin:0 10px;}
+#topFrame .userInfo ul li a { color: #FF0; text-decoration: none; }
+#topFrame .userInfo ul .blank { width: 100px; }
+
+/*********************************左部样式************************************/
+
+#leftFrame { height: 100%; width: 300px; background-color: #ccc; }
+#leftFrame a {
+	font-size: 14px;
+	color:#000;
+	line-height: 50px;
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+	height: 50px;
+	border-bottom:1px solid #333;
+	letter-spacing: 8px;
+	text-align: left;
+	width: 200px;
+	padding-left: 75px;
+	background: url(../images/flag.gif) no-repeat 35px 15px #ccc;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+#leftFrame a:hover { background: url(../images/flagHover.gif) no-repeat 45px 15px #eee; }
+#leftFrame .hover{ background: url(../images/flagHover.gif) no-repeat 45px 15px #eee;}
+
+/**************************************************题库管理************************************************************/
+.bgColor_01 { background:#9CC; }
+.bgColor_02 { background:#eef; }
+#container { width: 700px; margin:0 auto; }
+#container .title { text-align: left; padding-top: 20px; }
+/**************************************************题库管理主界面********************************************************/
+
+#testManage table tr td { height: 30px; }
+#testManage form table thead tr th { background-color: #09C; }
+#testManage form table caption { font-size: 14px; font-weight: bold; height: 40px; line-height:40px;}
+#testManage form table tfoot tr td span { margin-right: 3px; margin-left: 3px; }
+#testManage form table tfoot tr td span .input { width: 40px; }
+#testManage form table tfoot tr td span .btn { width: 40px; }
+#testManage form table tfoot tr td { background-color: #CCC; }
+#testManage .select { text-align: left; margin-top: 20px; padding-left: 20px; }
+#testManage .select form span { padding-right: 3px; padding-left: 3px; }
+#testManage .select form { margin-top: 10px; }
+#testManage .select form span .btn { background: transparent url(../images/btn_01.png) no-repeat; height: 28px; width: 60px; border:0px; margin-left:10px; }
+
+/***********************************************问卷管理主界面************************************************/
+
+#questionnaireManage table tr td { height: 30px; }
+#questionnaireManage form table tr th { background-color: #09C; }
+#questionnaireManage form table caption { font-size: 14px; font-weight: bold; height: 40px; line-height:40px;}
+#questionnaireManage form table  tr td span { margin-right: 3px; margin-left: 3px; }
+#questionnaireManage form table  tr td span .input { width: 40px; }
+#questionnaireManage form table  tr td span .btn { width: 40px; }
+#questionnaireManage form table tfoot tr td { background-color: #CCC; }
+#questionnaireManage form table thead tr td { background-color: #CCC; }
+#questionnaireManage .select { margin-top: 20px; padding-left: 20px; }
+#questionnaireManage .select  span { padding-right: 3px; padding-left: 3px; }
+
+#questionnaireManage .select  span .btn { background: transparent url(../images/btn_01.png) no-repeat; height: 28px; width: 60px; border:0px; margin-left:10px; }
+#container .choose a { display: block; float: left; padding:5px 20px 5px 20px; color:#000; background: #CCC; text-decoration: none; border:1px solid #666; margin-left:5px; display:inline;}
+#container .choose a:hover { background:#Fa0;}
+#container .choose { padding-top: 10px; padding-bottom: 10px; }
+
+/**************************问卷页面*******************************/
+#questionnaireManageMain table tr td { height: 40px; }
+#questionnaireManageMain form table tr th { background-color: #09C; }
+#questionnaireManageMain form table caption { font-size: 14px; font-weight: bold; height: 40px; line-height:40px;}
+#questionnaireManageMain form table  tr td span { margin-right: 3px; margin-left: 3px; }
+#questionnaireManageMain form table  tr td span .input { width: 40px; }
+#questionnaireManageMain form table  tr td span .btn { width: 40px; }
+#questionnaireManageMain form table tfoot tr td { background-color: #CCC; }
+#questionnaireManageMain form table thead tr td { background-color: #CCC; }
+#questionnaireManageMain form table tbody tr td a { margin: 0 5px; }
+#questionnaireManageMain .select { margin-top: 20px;  }
+
+#questionnaireManageMain .select  span .btn { height: 28px; width: 91px; border:0px; margin-left:10px; background-color: transparent; background-image: url(../images/btn_02.gif); background-repeat: no-repeat; }
+#questionnaireManageMain form .select .left { float: left; }
+#questionnaireManageMain form .select .right { float: right; }
+/************************************************职位发布主界面********************************************/
+#jobPublish table tr td { height: 30px; }
+#jobPublish form table thead tr th { background-color: #09C; }
+#jobPublish form table caption { font-size: 14px; font-weight: bold; height: 40px; line-height:40px;}
+#jobPublish form table tfoot tr td span { margin-right: 3px; margin-left: 3px; }
+#jobPublish form table tfoot tr td span .input { width: 40px; }
+#jobPublish form table tfoot tr td span .btn { width: 40px; }
+#jobPublish form table tfoot tr td { background-color: #CCC; }
+#jobPublish .select { text-align: left; margin-top: 15px; padding-left: 20px; }
+#jobPublish .select form span { padding-right: 3px; padding-left: 3px; }
+#jobPublish .select form { margin-top: 10px; line-height: 28px; }
+#jobPublish .select form span .btn { background: transparent url(../images/btn_01.png) no-repeat; height: 28px; width: 60px; border:0px; }
+#jobPublish .select p { line-height: 20px; padding-top: 5px; }
+/************************************职位描述***************************************/
+#jobDepict .leftMain { float: left; width: 550px; }
+#jobDepict .rightMain { float: left; width: 150px; padding-top: 50px; }
+#jobDepict .leftMain ul li { text-align: left; padding:5px 0px;}
+#jobDepict .leftMain .title { font-size: 14px; font-weight: bold; color: #036; display: block; height: 30px; text-align: center; }
+#jobDepict .leftMain ul li .time { margin-right: 50px; }
+#jobDepict .leftMain ul li p { line-height: 24px; padding-left: 40px; }
+#jobDepict .leftMain .pass table tr td { height: 30px; }
+#jobDepict .leftMain .pass table tr th { font-weight: bold; height: 30px; background-color: #09c; }
+#jobDepict .leftMain .pass table { float: left; margin-right: 3px; }
+#jobDepict .leftMain .pass table caption { font-size: 14px; font-weight: bold; height: 40px; text-align: left; line-height: 40px; }
+#jobDepict .rightMain a { background-image: url(../images/btn_02.gif); background-repeat: no-repeat; height: 28px; width: 91px; display: block; margin:0 auto; font-size: 14px; line-height: 28px; text-decoration: none; color: #000; margin:10px 0;}
+
+/**************************************************用户管理主界面********************************************************/
+#userManage table tr td { height: 30px; }
+#userManage form table tr th { background-color: #09C; }
+#userManage form table caption { font-size: 14px; font-weight: bold; height: 40px; line-height:40px;}
+#userManage form table  tr td span { margin-right: 3px; margin-left: 3px; }
+#userManage form table  tr td span .input { width: 40px; }
+#userManage form table  tr td span .btn { width: 40px; }
+#userManage form table tfoot tr td { background-color: #CCC; }
+#userManage form table thead tr td { background-color: #CCC; }
+#userManage .select { margin-top: 20px; padding-left: 20px; }
+#userManage .select  span { padding-right: 3px; padding-left: 3px; }
+#userManage .select  span .btn { background: transparent url(../images/btn_01.png) no-repeat; height: 28px; width: 60px; border:0px; margin-left:10px; }
+#userManage { margin-top: 20px; }
+
+/**************************************************职位应聘者信息********************************************************/
+#intervieweeInfo table tr td { height: 30px; }
+#intervieweeInfo form table caption { font-size: 14px; font-weight: bold; height: 40px; line-height:40px;}
+#intervieweeInfo form table  tr td span { margin-right: 3px; margin-left: 3px; }
+#intervieweeInfo form table  tr td span .input { width: 40px; }
+#intervieweeInfo form table  tr td span .btn { width: 40px; }
+#intervieweeInfo form table tfoot tr td { background-color: #CCC; }
+#intervieweeInfo form table tbody tr td a { margin: 0 5px; }
+#intervieweeInfo .select { margin-top: 20px;  }
+
+#intervieweeInfo .select  .btn { height: 28px; width: 60px; border:0px; margin-left:10px; background-color: transparent; background-image: url(../images/btn_01.png); background-repeat: no-repeat; display: block; }
+#intervieweeInfo form .select .left { float: left; }
+#intervieweeInfo form .select .right { float: right; }
+#intervieweeInfo form table tr th { height: 30px; background:#09c;}
+#intervieweeInfo form .select .right a { color: #000; }
+#container .choose .left { float: left; }
+/**************************************************简历信息********************************************************/
+#CVInfo .leftMain { float: left; width: 550px; }
+#CVInfo .rightMain { float: left; width: 150px; padding-top: 70px; }
+#CVInfo .leftMain table tr td { height: 30px; }
+#CVInfo .leftMain table caption { font-size: 14px; line-height: 40px; font-weight: bold; height: 40px; }
+#CVInfo .leftMain .personInfo tr td { border: 1px solid #000; border-right:0px; border-bottom:0px;}
+#CVInfo .leftMain .personInfo tr th{ border: 1px solid #000; border-right:0px; border-bottom:0px; background-color: #09c; height: 30px; text-align: left;}
+#CVInfo .leftMain .personInfo { border-right:#000 1px solid;}
+#CVInfo .leftMain .eduInfo tr td { border: 1px solid #000; border-right:0px; border-bottom:0px;}
+#CVInfo .leftMain .eduInfo tr th{ border: 1px solid #000; border-right:0px; border-bottom:0px; background-color: #09c; height: 30px; text-align: left; }
+#CVInfo .leftMain .eduInfo { border-right:#000 1px solid; border-bottom:#000 1px solid;}
+#CVInfo .rightMain .btn { background: url(../images/btn_02.gif) no-repeat transparent; height: 28px; width: 91px; margin:5px auto; border:0px;}
+/**************************************************问卷回答********************************************************/
+#testAnswer table caption { font-size: 14px; font-weight: bold; color: #03F; line-height: 40px; height: 40px; }
+#testAnswer table tr th { font-weight: bold; height: 30px; background-color: #09c; }
+#container #testAnswer table tr td { }
+#testAnswer table tr td ul li { height: 20px; text-align: left; padding-left: 10px; padding-bottom: 10px; }
+#testAnswer table tr td ul li input { margin-right: 10px; }
+#testAnswer table tr td ul .title { font-weight: bold; color: #F30; padding-top: 0px; }
+/**************************************************回复应聘者********************************************************/
+
+
+#replyInterviewee table caption { font-size: 14px; line-height: 40px; font-weight: bold; color: #03F; height: 40px; }
+#replyInterviewee table tr td { text-align:left; padding:3px 0;}
+#replyInterviewee table tr td .area { height: 100px; width: 698px; }
+#replyInterviewee table tr td .btn { background-color: transparent; background-image: url(../images/btn_02.gif); background-repeat: no-repeat; height: 28px; width: 91px; border:0px; margin:3px 0;}
+/**************************************************面试人员名单********************************************************/
+ #container .choose .right { float: right; }
+#container .choose .right a { font-size: 14px; font-weight: bold; color: #000; background-color: #CCC; display: block; height: 24px; width: 100px; line-height:26px; border: 1px solid #666; margin: 0px 3px;; padding: 0px; overflow:hidden}
+#container .choose .right a:hover { background:#F70;}
+#interviewList table tr td { height: 30px; }
+#interviewList form table caption { font-size: 14px; font-weight: bold; height: 40px; line-height:40px;}
+#interviewList form table  tr td span { margin-right: 3px; margin-left: 3px; }
+#interviewList form table  tr td span .input { width: 40px; }
+#interviewList form table  tr td span .btn { width: 40px; }
+#interviewList form table tfoot tr td { background-color: #CCC; }
+#interviewList form table tbody tr td a { margin: 0 5px; }
+#interviewList .select { margin-top: 20px;  }
+
+#interviewList .select  .btn { height: 28px; width: 60px; border:0px; margin-left:10px; background-color: transparent; background-image: url(../images/btn_01.png); background-repeat: no-repeat; }
+#interviewList form .select .left { float: left; }
+#interviewList form .select .right { float: right; }
+#interviewList form table tr th { height: 30px; background:#09c;}
+/**************************************************面试结果********************************************************/
+#interviewResult table caption { font-size: 14px; line-height: 40px; font-weight: bold; color: #03F; height: 40px; }
+#interviewResult table tr td .area { height: 80px; width: 698px; }
+#interviewResult table tr td .btn { background-color: transparent; background-image: url(../images/btn_02.gif); background-repeat: no-repeat; height: 28px; width: 91px; border:0px; }
+#interviewResult table tr td { text-align: left; }
